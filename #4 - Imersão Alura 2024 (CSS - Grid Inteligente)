@@ -1,0 +1,11 @@
+CSS
+
+GRID INTELIGENTE
+
+.offer__list-item {
+  /* CODIGO COM JS CALCULANDO OS CARDS POR COLUNA */
+  display: grid;
+  gap: 1rem;
+  grid-gap: 2rem; 
+  margin: 0 auto;
+}

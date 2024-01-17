@@ -1,0 +1,18 @@
+JS
+
+GRID INTELIGENTE
+
+const container = document.querySelector(".offer__list-item");
+
+const observer = new ResizeObserver(() => {
+  const containerWidth = container.offsetWidth; //cria uma constante chamada containerWidth e atribui a ela a largura do elemento HTML referenciado por container. A propriedade offsetWidth retorna a largura total de um elemento, incluindo a largura do conteúdo, preenchimento (padding), bordas (border), mas não inclui margens (margin).
+
+  const numColumns = Math.floor(containerWidth / 200); // Ajuste conforme necessário
+
+  container.style.gridTemplateColumns = `repeat(${numColumns}, minmax(200px, 1fr))`;
+
+  console.log({ container });
+  console.log({ numColumns });
+});
+
+observer.observe(container);
